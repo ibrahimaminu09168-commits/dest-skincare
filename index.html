@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D'EST Skincare &amp; Spa — Quality Skincare, Beauty Essentials &amp; Spa Experiences</title>
+<meta name="description" content="D'EST Skincare & Spa — quality skincare, beauty essentials and relaxing spa experiences in Ibadan. Celebrating 4 years of skincare and 1 year of spa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstataic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== Tokens ===== */
+:root{
+  --blush: #f7dde2;
+  --blush-light: #fcf0f2;
+  --off-white: #fffdfb;
+  --nude: #ecdccb;
+  --charcoal: #2b2420;
+  --charcoal-soft: #5b5049;
+  --rose: #c07786;
+  --rose-deep: #a05a68;
+  --rose-glow: #f3c6cf;
+  --border: #eedede;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 10px 30px rgba(43,36,32,.07);
+  --shadow-soft: 0 4px 14px rgba(43,36,32,.06);
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Manrope', sans-serif;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth; scroll-padding-top:90px;}
+body{
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background: var(--off-white);
+  line-height:1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%; display:block;}
+a{color:inherit; text-decoration:none;}
+button{font-family:inherit; cursor:pointer; border:none; background:none; color:inherit;}
+input, textarea{font-family:inherit; font-size:15px;}
+h1,h2,h3,h4{font-family:var(--font-display); font-weight:600; letter-spacing:-.01em;}
+.eyebrow{
+  text-transform:uppercase; letter-spacing:.14em; font-size:12px; font-weight:700;
+  color:var(--rose-deep); margin-bottom:10px;
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important;}
+}
+:focus-visible{outline:2px solid var(--rose-deep); outline-offset:2px;}
+
+/* ===== Buttons ===== */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:14px 28px; border-radius:999px; font-weight:700; font-size:14px;
+  letter-spacing:.02em; transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  white-space:nowrap;
+}
+.btn-primary{ background:var(--rose); color:#fff; box-shadow:0 8px 20px rgba(192,119,134,.35);}
+.btn-primary:hover{ background:var(--rose-deep); transform:translateY(-2px); }
+.btn-outline{ border:1.5px solid var(--rose); color:var(--rose-deep); background:transparent;}
+.btn-outline:hover{ background:var(--blush-light); transform:translateY(-2px);}
+.btn-whatsapp{ background:#25D366; color:#fff; box-shadow:0 8px 20px rgba(37,211,102,.3);}
+.btn-whatsapp:hover{ background:#1fb958; transform:translateY(-2px);}
+.btn-block{ width:100%; }
+.link-btn{ display:block; margin:12px auto 0; text-align:center; font-size:13px; color:var(--charcoal-soft); text-decoration:underline; width:100%;}
+
+/* ===== Header ===== */
+.site-header{
+  position:sticky; top:0; z-index:60; background:rgba(255,253,251,.92);
+  backdrop-filter:blur(10px); border-bottom:1px solid #f1e3e6;
+}
+.header-inner{
+  max-width:1280px; margin:0 auto; display:flex; align-items:center; gap:16px;
+  padding:14px 20px;
+}
+.logo{ font-family:var(--font-display); font-size:20px; font-weight:600; margin-right:auto;}
+.logo span{ font-weight:400; color:var(--rose-deep); }
+.hamburger{ display:flex; flex-direction:column; gap:5px; width:22px; }
+.hamburger span{ height:2px; background:var(--charcoal); border-radius:2px; transition:.25s;}
+.hamburger.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2){ opacity:0; }
+.hamburger.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+.main-nav{ display:none; gap:28px; font-size:14px; font-weight:600;}
+.main-nav a{ transition:color .2s; }
+.main-nav a:hover{ color:var(--rose-deep); }
+.header-actions{ display:flex; align-items:center; gap:8px;}
+.icon-btn{ position:relative; width:38px; height:38px; display:flex; align-items:center; justify-content:center; border-radius:50%; transition:background .2s;}
+.icon-btn:hover{ background:var(--blush-light); }
+.icon-btn svg{ width:20px; height:20px; }
+.cart-badge{
+  position:absolute; top:-2px; right:-2px; background:var(--rose-deep); color:#fff;
+  font-size:10px; font-weight:800; border-radius:50%; width:17px; height:17px;
+  display:flex; align-items:center; justify-content:center; transition:transform .25s;
+}
+.cart-badge.bump{ transform:scale(1.4); }
+
+.search-bar{ max-height:0; overflow:hidden; transition:max-height .3s ease; background:var(--blush-light);}
+.search-bar.open{ max-height:90px; border-bottom:1px solid #f1e3e6;}
+.search-bar-inner{ max-width:1280px; margin:0 auto; display:flex; align-items:center; gap:10px; padding:14px 20px;}
+.search-bar-inner svg{ width:18px; height:18px; color:var(--rose-deep); flex-shrink:0;}
+.search-bar-inner input{ flex:1; border:none; background:none; font-size:15px; outline:none;}
+.search-bar-inner button{ font-size:22px; color:var(--charcoal-soft); line-height:1;}
+.search-results-count{ max-width:1280px; margin:0 auto; padding:0 20px 10px; font-size:12px; color:var(--charcoal-soft);}
+
+/* mobile nav drawer */
+@media (max-width: 899px){
+  .main-nav{
+    position:fixed; top:0; left:0; height:100vh; width:78%; max-width:320px;
+    background:var(--off-white); flex-direction:column; padding:90px 28px 28px;
+    transform:translateX(-100%); transition:transform .3s ease; z-index:65;
+    box-shadow: 8px 0 30px rgba(0,0,0,.08);
+  }
+  .main-nav.open{ transform:translateX(0); display:flex;}
+  .main-nav a{ padding:14px 0; border-bottom:1px solid #f1e3e6; font-size:17px;}
+  .nav-overlay{ position:fixed; inset:0; background:rgba(43,36,32,.35); opacity:0; pointer-events:none; transition:opacity .3s; z-index:64;}
+  .nav-overlay.open{ opacity:1; pointer-events:auto;}
+}
+@media (min-width:900px){
+  .hamburger{ display:none;}
+  .main-nav{ display:flex;}
+}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative; text-align:center; padding:90px 20px 70px; overflow:hidden;
+  background:linear-gradient(180deg, var(--blush-light) 0%, var(--off-white) 100%);
+}
+.hero-inner{ max-width:680px; margin:0 auto; position:relative; z-index:2;}
+.hero .eyebrow{ animation:fadeUp .7s ease both;}
+.hero h1{ font-size:clamp(32px,7vw,56px); line-height:1.08; margin-bottom:18px; animation:fadeUp .7s ease .1s both;}
+.hero-sub{ font-size:16px; color:var(--charcoal-soft); max-width:440px; margin:0 auto 30px; animation:fadeUp .7s ease .2s both;}
+.hero-actions{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; animation:fadeUp .7s ease .3s both;}
+.hero-glow{
+  position:absolute; width:520px; height:520px; border-radius:50%;
+  background:radial-gradient(circle, var(--rose-glow) 0%, transparent 70%);
+  top:-220px; right:-180px; opacity:.7; z-index:1;
+}
+@keyframes fadeUp{ from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:translateY(0);} }
+
+/* ===== Sections ===== */
+.section{ padding:60px 20px; max-width:1280px; margin:0 auto;}
+.section-blush{ background:var(--blush-light); max-width:none; padding:60px 20px;}
+.section-blush > *{ max-width:1280px; margin-left:auto; margin-right:auto;}
+.section-head{ text-align:center; max-width:560px; margin:0 auto 34px;}
+.section-head h2{ font-size:clamp(24px,4vw,34px);}
+
+/* ===== Category bar ===== */
+.category-bar{
+  display:flex; gap:10px; overflow-x:auto; padding-bottom:14px; margin-bottom:26px;
+  scrollbar-width:none; max-width:1280px; margin-left:auto; margin-right:auto;
+}
+.category-bar::-webkit-scrollbar{ display:none;}
+.cat-chip{
+  flex-shrink:0; padding:10px 20px; border-radius:999px; font-size:13px; font-weight:700;
+  background:#fff; border:1px solid #f0dfe3; color:var(--charcoal-soft); transition:.2s;
+}
+.cat-chip.active, .cat-chip:hover{ background:var(--rose); color:#fff; border-color:var(--rose);}
+
+/* ===== Product grid ===== */
+.product-grid{
+  display:grid; grid-template-columns:repeat(2, 1fr); gap:16px;
+  max-width:1280px; margin:0 auto;
+}
+@media (min-width:700px){ .product-grid{ grid-template-columns:repeat(3, 1fr);} }
+@media (min-width:1024px){ .product-grid{ grid-template-columns:repeat(4, 1fr); gap:22px;} }
+
+.product-card{
+  background:#fff; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-soft);
+  border:1px solid #f4e9eb; display:flex; flex-direction:column; opacity:0; transform:translateY(18px);
+  transition:opacity .5s ease, transform .5s ease, box-shadow .25s;
+}
+.product-card.in-view{ opacity:1; transform:translateY(0);}
+.product-card:hover{ box-shadow:0 14px 30px rgba(43,36,32,.1);}
+.pc-media{ position:relative; aspect-ratio:1/1; background:var(--blush-light); overflow:hidden;}
+.pc-media img{ width:100%; height:100%; object-fit:contain; padding:10px; position:absolute; inset:0; opacity:0; transition:opacity .6s ease;}
+.pc-media img.active{ opacity:1;}
+.pc-badge{ position:absolute; top:10px; left:10px; background:var(--rose-deep); color:#fff; font-size:10px; font-weight:800; letter-spacing:.04em; padding:5px 10px; border-radius:999px; z-index:3; text-transform:uppercase;}
+.pc-badge.pc-badge-stock{ background:#8a8078; }
+.pc-wishlist{ position:absolute; top:8px; right:8px; width:32px; height:32px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-soft); z-index:3; transition:transform .2s;}
+.pc-wishlist:hover{ transform:scale(1.1);}
+.pc-wishlist svg{ width:16px; height:16px; stroke:var(--rose-deep); fill:none;}
+.pc-wishlist.active svg{ fill:var(--rose-deep);}
+.pc-dots{ position:absolute; bottom:8px; left:0; right:0; display:flex; gap:5px; justify-content:center; z-index:3;}
+.pc-dot{ width:5px; height:5px; border-radius:50%; background:#fff; opacity:.5; box-shadow:0 0 0 1px rgba(0,0,0,.1);}
+.pc-dot.active{ opacity:1; background:var(--rose-deep);}
+.pc-body{ padding:14px; display:flex; flex-direction:column; gap:6px; flex:1;}
+.pc-cat{ font-size:10px; text-transform:uppercase; letter-spacing:.06em; color:var(--rose-deep); font-weight:700;}
+.pc-name{ font-family:var(--font-display); font-size:15px; font-weight:500; line-height:1.3; cursor:pointer;}
+.pc-price{ font-weight:800; font-size:15px; margin-top:auto;}
+.pc-price.unavailable{ color:var(--charcoal-soft); font-size:12px; font-weight:600;}
+.pc-stock-note{ font-size:11px; font-weight:700; color:#a05a68;}
+.pc-card.out-of-stock, .product-card.out-of-stock{ opacity:.75;}
+.pc-actions{ display:flex; gap:8px; margin-top:8px;}
+.pc-add{
+  flex:1; background:var(--rose); color:#fff; font-size:12px; font-weight:700; padding:10px; border-radius:999px;
+  transition:.2s;
+}
+.pc-add:hover{ background:var(--rose-deep);}
+.pc-add:disabled{ background:#e5dcdc; color:#9c9090; cursor:not-allowed;}
+.pc-view{
+  padding:10px 14px; border-radius:999px; border:1px solid #eddade; font-size:12px; font-weight:700; color:var(--charcoal-soft);
+}
+.pc-view:hover{ background:var(--blush-light);}
+.empty-state{ text-align:center; color:var(--charcoal-soft); padding:30px 0;}
+
+/* ===== Pagination / Load more ===== */
+.grid-pagination{ display:flex; flex-direction:column; align-items:center; gap:14px; margin-top:30px; max-width:1280px; margin-left:auto; margin-right:auto;}
+.grid-pagination[hidden]{ display:none;}
+.load-more-btn{ min-width:200px;}
+.pagination-status{ font-size:12px; color:var(--charcoal-soft);}
+.page-nums{ display:flex; gap:6px; flex-wrap:wrap; justify-content:center;}
+.page-num-btn{
+  width:34px; height:34px; border-radius:50%; font-size:13px; font-weight:700;
+  background:#fff; border:1px solid #f0dfe3; color:var(--charcoal-soft); transition:.2s;
+}
+.page-num-btn.active, .page-num-btn:hover{ background:var(--rose); color:#fff; border-color:var(--rose);}
+
+/* ===== Testimonials ===== */
+.testi-slider{ position:relative; max-width:640px; margin:0 auto; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow);}
+.testi-track{ display:flex; transition:transform .6s cubic-bezier(.6,0,.3,1);}
+.testi-track img{ width:100%; flex-shrink:0; aspect-ratio:4/5; object-fit:cover;}
+.testi-arrow{
+  position:absolute; top:50%; transform:translateY(-50%); width:38px; height:38px; border-radius:50%;
+  background:rgba(255,255,255,.85); font-size:20px; display:flex; align-items:center; justify-content:center;
+  box-shadow:var(--shadow-soft); color:var(--rose-deep);
+}
+.testi-prev{ left:12px;} .testi-next{ right:12px;}
+.testi-dots{ position:absolute; bottom:12px; left:0; right:0; display:flex; gap:6px; justify-content:center;}
+.testi-dots span{ width:7px; height:7px; border-radius:50%; background:#fff; opacity:.6; cursor:pointer;}
+.testi-dots span.active{ opacity:1; background:var(--rose-deep); width:18px; border-radius:4px; transition:.3s;}
+
+/* ===== Spa ===== */
+.spa{
+  padding:80px 20px; text-align:center; background:linear-gradient(160deg, var(--nude), var(--blush-light));
+  border-top:1px solid #f1e3e6; border-bottom:1px solid #f1e3e6;
+}
+.spa-inner{ max-width:520px; margin:0 auto;}
+.spa h2{ font-size:clamp(26px,4.4vw,38px); margin:8px 0 14px;}
+.spa p{ color:var(--charcoal-soft); margin-bottom:26px;}
+
+/* ===== Spa Services Modal ===== */
+.spa-modal{ max-width:660px; }
+.spa-modal-head{ margin-bottom:20px; padding-right:22px;}
+.spa-modal-head h3{ font-size:22px; margin:4px 0 6px;}
+.spa-modal-sub{ font-size:13px; color:var(--charcoal-soft);}
+.spa-services-list{ display:flex; flex-direction:column; gap:26px;}
+.spa-cat-block{}
+.spa-cat-title{
+  font-family:var(--font-display); font-size:16px; font-weight:600; color:var(--rose-deep);
+  margin-bottom:12px; padding-bottom:6px; border-bottom:1px solid #f1e0e3;
+}
+.spa-service-grid{ display:grid; grid-template-columns:1fr; gap:12px;}
+@media (min-width:520px){ .spa-service-grid{ grid-template-columns:1fr 1fr;} }
+.spa-service-card{
+  background:linear-gradient(160deg,#fff, var(--blush-light));
+  border:1px solid #f1e0e3; border-radius:14px; padding:16px;
+  display:flex; flex-direction:column; gap:10px;
+  transition:box-shadow .2s ease, transform .2s ease;
+}
+.spa-service-card:hover{ box-shadow:var(--shadow-soft); transform:translateY(-2px);}
+.ssc-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px;}
+.ssc-name{ font-weight:700; font-size:14px; line-height:1.3;}
+.ssc-price{ font-weight:800; font-size:14px; color:var(--rose-deep); white-space:nowrap;}
+.ssc-price.unavailable{ font-size:11px; font-weight:700; color:var(--charcoal-soft);}
+.ssc-book{ font-size:12px; padding:10px;}
+
+/* ===== Trust ===== */
+.trust{ padding:50px 20px; max-width:1280px; margin:0 auto;}
+.trust-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; text-align:center;}
+@media (min-width:700px){ .trust-grid{ grid-template-columns:repeat(4,1fr);} }
+.trust-icon{ width:44px; height:44px; border-radius:50%; background:var(--blush); color:var(--rose-deep); display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-weight:800;}
+.trust-item h3{ font-size:14px; font-weight:700; font-family:var(--font-body);}
+
+/* ===== About ===== */
+.about-grid{ display:grid; gap:34px;}
+@media (min-width:800px){ .about-grid{ grid-template-columns:1.3fr 1fr; align-items:start;} }
+.about-text{ color:var(--charcoal-soft); margin-top:14px; max-width:520px;}
+.about-hours{ background:var(--blush-light); border-radius:var(--radius); padding:26px; border:1px solid #f1e3e6;}
+.about-hours h3{ margin-bottom:14px; font-size:16px;}
+.hours-row{ display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid #f1e3e6; font-size:14px;}
+.hours-row:last-child{ border-bottom:none;}
+
+/* ===== Track order ===== */
+.track-form{ display:flex; flex-direction:column; gap:12px; max-width:420px; margin:0 auto;}
+.track-form input{ padding:13px 16px; border-radius:999px; border:1px solid #eddade; outline:none;}
+.track-form input:focus{ border-color:var(--rose);}
+.track-result{ max-width:420px; margin:22px auto 0; background:#fff; border-radius:var(--radius); padding:20px; border:1px solid #f1e3e6; box-shadow:var(--shadow-soft);}
+.track-result h4{ margin-bottom:8px;}
+.track-result .tr-row{ display:flex; justify-content:space-between; padding:6px 0; font-size:14px;}
+.status-pill{ display:inline-block; padding:4px 12px; border-radius:999px; font-size:11px; font-weight:800; background:var(--blush); color:var(--rose-deep);}
+
+/* ===== Contact ===== */
+.contact-grid{ display:grid; gap:16px; margin-bottom:28px;}
+@media (min-width:700px){ .contact-grid{ grid-template-columns:repeat(3,1fr);} }
+.contact-card{ background:var(--blush-light); border-radius:var(--radius); padding:22px; border:1px solid #f1e3e6;}
+.contact-card h3{ font-size:14px; margin-bottom:8px;}
+.contact-card p{ font-size:14px; color:var(--charcoal-soft);}
+.contact-card a{ color:var(--rose-deep); font-weight:700;}
+
+/* ===== Footer ===== */
+.site-footer{ background:var(--charcoal); color:#f4e9ea; padding:50px 20px 20px;}
+.footer-inner{ max-width:1280px; margin:0 auto; display:grid; gap:30px; grid-template-columns:1fr;}
+@media (min-width:700px){ .footer-inner{ grid-template-columns:1.4fr repeat(3,1fr);} }
+.footer-logo{ font-family:var(--font-display); font-size:20px; margin-bottom:8px;}
+.footer-logo span{ color:var(--rose-glow); font-weight:400;}
+.footer-desc{ font-size:13px; color:#cbb9bb; max-width:280px;}
+.footer-inner h4{ font-size:13px; text-transform:uppercase; letter-spacing:.06em; margin-bottom:12px; color:#e9d3d5;}
+.footer-inner a{ display:block; font-size:14px; color:#d9c4c6; padding:4px 0; transition:color .2s;}
+.footer-inner a:hover{ color:#fff;}
+.footer-copy{ text-align:center; font-size:12px; color:#a08e90; margin-top:40px;}
+
+/* ===== Floating WhatsApp ===== */
+.fab-whatsapp{
+  position:fixed; bottom:22px; right:18px; width:54px; height:54px; border-radius:50%;
+  background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center;
+  box-shadow:0 10px 24px rgba(37,211,102,.4); z-index:50; transition:transform .2s;
+}
+.fab-whatsapp svg{ width:28px; height:28px;}
+.fab-whatsapp:hover{ transform:scale(1.08);}
+
+/* ===== Cart Drawer ===== */
+.drawer-overlay, .modal-overlay{
+  position:fixed; inset:0; background:rgba(43,36,32,.4); opacity:0; pointer-events:none;
+  transition:opacity .3s; z-index:70;
+}
+.drawer-overlay.open, .modal-overlay.open{ opacity:1; pointer-events:auto;}
+.cart-drawer{
+  position:fixed; top:0; right:0; height:100%; width:100%; max-width:420px; background:#fff;
+  z-index:80; transform:translateX(100%); transition:transform .35s ease; display:flex; flex-direction:column;
+  box-shadow:-10px 0 30px rgba(0,0,0,.1);
+}
+.cart-drawer.open{ transform:translateX(0);}
+.drawer-head{ display:flex; justify-content:space-between; align-items:center; padding:20px; border-bottom:1px solid #f1e3e6;}
+.drawer-head h3{ font-size:18px;}
+.drawer-close{ font-size:26px; color:var(--charcoal-soft);}
+.cart-items{ flex:1; overflow-y:auto; padding:14px 20px;}
+.cart-empty{ text-align:center; color:var(--charcoal-soft); padding:40px 20px;}
+.cart-item{ display:flex; gap:12px; padding:14px 0; border-bottom:1px solid #f4e9eb;}
+.cart-item img{ width:64px; height:64px; object-fit:contain; background:var(--blush-light); border-radius:10px; padding:4px;}
+.ci-info{ flex:1; display:flex; flex-direction:column; gap:4px;}
+.ci-name{ font-size:13px; font-weight:700;}
+.ci-price{ font-size:12px; color:var(--charcoal-soft);}
+.ci-qty{ display:flex; align-items:center; gap:10px; margin-top:4px;}
+.ci-qty button{ width:24px; height:24px; border-radius:50%; border:1px solid #eddade; font-weight:700;}
+.ci-remove{ font-size:11px; color:var(--rose-deep); text-decoration:underline; align-self:flex-start;}
+.cart-summary{ padding:18px 20px 22px; border-top:1px solid #f1e3e6;}
+.summary-row{ display:flex; justify-content:space-between; font-size:14px; padding:5px 0; color:var(--charcoal-soft);}
+.summary-row.discount-row{ color:var(--rose-deep); font-weight:700;}
+.summary-total{ font-size:17px; font-weight:800; color:var(--charcoal); border-top:1px solid #f1e3e6; margin-top:6px; padding-top:12px;}
+
+/* ===== Modals ===== */
+.modal{
+  position:fixed; top:50%; left:50%; transform:translate(-50%,-46%); width:92%; max-width:560px;
+  max-height:88vh; overflow-y:auto; background:#fff; border-radius:22px; z-index:90; padding:26px;
+  opacity:0; pointer-events:none; transition:opacity .3s, transform .3s; box-shadow:0 30px 60px rgba(0,0,0,.2);
+}
+.modal.open{ opacity:1; pointer-events:auto; transform:translate(-50%,-50%);}
+.modal-close{ position:absolute; top:16px; right:18px; font-size:26px; color:var(--charcoal-soft); z-index:5;}
+
+/* product modal */
+.pm-body{ display:flex; flex-direction:column; gap:18px;}
+@media (min-width:560px){ .pm-body{ flex-direction:row;} }
+.pm-media{ position:relative; flex:1; aspect-ratio:1/1; background:var(--blush-light); border-radius:16px; overflow:hidden;}
+.pm-media img{ width:100%; height:100%; object-fit:contain; padding:16px; position:absolute; inset:0; opacity:0; transition:opacity .5s;}
+.pm-media img.active{ opacity:1;}
+.pm-dots{ position:absolute; bottom:10px; left:0; right:0; display:flex; gap:6px; justify-content:center;}
+.pm-dots span{ width:7px; height:7px; border-radius:50%; background:#fff; opacity:.5; box-shadow:0 0 0 1px rgba(0,0,0,.1); cursor:pointer;}
+.pm-dots span.active{ opacity:1; background:var(--rose-deep);}
+.pm-info{ flex:1; display:flex; flex-direction:column; gap:10px;}
+.pm-cat{ font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--rose-deep); font-weight:700;}
+.pm-name{ font-size:22px;}
+.pm-price{ font-size:20px; font-weight:800;}
+.pm-stock-note{ font-size:13px; font-weight:700; color:#a05a68;}
+.pm-qty{ display:flex; align-items:center; gap:14px; margin:6px 0;}
+.pm-qty button{ width:32px; height:32px; border-radius:50%; border:1px solid #eddade; font-weight:700; font-size:16px;}
+.pm-actions{ display:flex; gap:10px; margin-top:6px;}
+
+/* checkout modal */
+.checkout-steps{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:22px; padding-right:20px;}
+.checkout-steps .step{ font-size:11px; font-weight:700; color:#c7b9ba; padding-bottom:6px; border-bottom:2px solid transparent;}
+.checkout-steps .step.active{ color:var(--rose-deep); border-color:var(--rose-deep);}
+.checkout-panel h3{ margin-bottom:16px; font-size:19px;}
+.ck-order-type-badge{
+  display:inline-block; font-size:11px; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
+  background:var(--blush); color:var(--rose-deep); padding:6px 14px; border-radius:999px; margin-bottom:16px;
+}
+#ckForm{ display:flex; flex-direction:column; gap:12px;}
+#ckForm label, .checkout-panel form label{ display:flex; flex-direction:column; gap:5px; font-size:12px; font-weight:700; color:var(--charcoal-soft);}
+#ckForm input, #ckForm textarea, .checkout-panel input, .checkout-panel textarea{
+  padding:12px 14px; border-radius:10px; border:1px solid #eddade; font-size:14px; outline:none; color:var(--charcoal); font-weight:500;
+}
+#ckForm input:focus, #ckForm textarea:focus{ border-color:var(--rose);}
+.ck-review-items{ margin-bottom:14px; max-height:200px; overflow-y:auto;}
+.ck-review-item{ display:flex; justify-content:space-between; font-size:13px; padding:7px 0; border-bottom:1px solid #f4e9eb;}
+.delivery-note{ font-size:12px; color:var(--charcoal-soft); margin:10px 0 16px;}
+.ck-btn-row{ display:flex; gap:12px; margin-top:10px;}
+.ck-btn-row .btn{ flex:1;}
+.payment-box{ background:var(--blush-light); border-radius:14px; padding:18px; margin-bottom:18px;}
+.pay-label{ font-size:13px; font-weight:700; margin-bottom:10px;}
+.pay-details div{ display:flex; justify-content:space-between; font-size:13px; padding:6px 0; border-bottom:1px solid #f1e3e6;}
+.pay-details div:last-child{ border-bottom:none; font-size:15px; padding-top:10px;}
+.payment-countdown{ text-align:center; margin-bottom:18px;}
+.payment-countdown p{ font-size:12px; color:var(--charcoal-soft);}
+.pc-timer{ font-family:var(--font-display); font-size:34px; color:var(--rose-deep); font-weight:600;}
+.pc-expired{ color:#c0392b; font-weight:700; margin-top:6px;}
+#ckPaymentForm{ display:flex; flex-direction:column; gap:12px;}
+.ck-success{ text-align:center; padding:10px 0;}
+.ck-check{ width:56px; height:56px; border-radius:50%; background:var(--blush); color:var(--rose-deep); font-size:26px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;}
+.order-id-display{ margin:14px 0 4px; font-size:15px;}
+.order-status-note{ font-size:13px; color:var(--charcoal-soft); margin-bottom:20px;}
+.ck-final-actions{ display:flex; flex-direction:column; gap:10px;}
+
+/* whatsapp modal */
+.wa-sub{ font-size:13px; color:var(--charcoal-soft); margin-bottom:14px;}
+#waQuestionText{ width:100%; min-height:110px; padding:14px; border-radius:12px; border:1px solid #eddade; margin-bottom:14px; resize:vertical;}
+
+@media (max-width:480px){
+  .modal{ padding:22px 18px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="#home" class="logo">D'EST <span>Skincare &amp; Spa</span></a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+      <a href="#spa">Spa</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search products">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="icon-btn" id="trackToggle" aria-label="Track order">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M3 6h18M3 18h12"/></svg>
+      </button>
+      <button class="icon-btn cart-btn" id="cartToggle" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L4.5 2H2"/><circle cx="9.5" cy="20" r="1.4"/><circle cx="17.5" cy="20" r="1.4"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-bar" id="searchBar">
+    <div class="search-bar-inner">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search skincare, soap, Nivea, kids...">
+      <button id="searchClose" aria-label="Close search">&times;</button>
+    </div>
+    <div id="searchResultsCount" class="search-results-count"></div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <p class="eyebrow">Beauty Care. Confidence.</p>
+    <h1>Healthy Skin Starts<br>With The Right Care</h1>
+    <p class="hero-sub">Shop carefully selected skincare and beauty products from D'EST Skincare &amp; Spa.</p>
+    <div class="hero-actions">
+      <a href="#shop" class="btn btn-primary">Shop Now</a>
+      <button type="button" class="btn btn-outline" id="heroBookSpaBtn">Book a Spa Service</button>
+    </div>
+  </div>
+  <div class="hero-glow"></div>
+</section>
+
+<!-- ================= FEATURED ================= -->
+<section class="section" id="featured">
+  <div class="section-head">
+    <p class="eyebrow">Handpicked</p>
+    <h2>Featured Products</h2>
+  </div>
+  <div class="product-grid" id="featuredGrid"></div>
+</section>
+
+<!-- ================= SHOP ================= -->
+<section class="section section-blush" id="shop">
+  <div class="section-head">
+    <p class="eyebrow">The Full Collection</p>
+    <h2>Shop All Products</h2>
+  </div>
+
+  <div class="category-bar" id="categoryBar"></div>
+
+  <div class="product-grid" id="shopGrid"></div>
+  <p class="empty-state" id="shopEmpty" hidden>No product found. Try another search.</p>
+  <div class="grid-pagination" id="shopPagination" hidden>
+    <p class="pagination-status" id="shopPaginationStatus"></p>
+    <div class="page-nums" id="shopPageNums"></div>
+  </div>
+</section>
+
+<!-- ================= POPULAR PICKS ================= -->
+<section class="section" id="popular">
+  <div class="section-head">
+    <p class="eyebrow">Customer Favourites</p>
+    <h2>Popular Picks</h2>
+  </div>
+  <div class="product-grid" id="popularGrid"></div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section section-blush" id="testimonials">
+  <div class="section-head">
+    <p class="eyebrow">From Our Customers</p>
+    <h2>What Our Customers Are Saying</h2>
+  </div>
+  <div class="testi-slider" id="testiSlider">
+    <div class="testi-track" id="testiTrack"></div>
+    <button class="testi-arrow testi-prev" id="testiPrev" aria-label="Previous">&#8249;</button>
+    <button class="testi-arrow testi-next" id="testiNext" aria-label="Next">&#8250;</button>
+    <div class="testi-dots" id="testiDots"></div>
+  </div>
+</section>
+
+<!-- ================= SPA ================= -->
+<section class="spa" id="spa">
+  <div class="spa-inner">
+    <p class="eyebrow">D'EST Spa</p>
+    <h2>Relax. Refresh. Rejuvenate.</h2>
+    <p>Discover D'EST Spa services designed to help you relax and feel your best.</p>
+    <a href="#contact" class="btn btn-primary">Explore Spa Services</a>
+  </div>
+</section>
+
+<!-- ================= TRUST ================= -->
+<section class="trust">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <div class="trust-icon">✓</div>
+      <h3>Authentic Beauty Care</h3>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">✓</div>
+      <h3>Carefully Selected Products</h3>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">✓</div>
+      <h3>Easy Ordering</h3>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">✓</div>
+      <h3>Convenient Delivery</h3>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="about-grid">
+    <div>
+      <p class="eyebrow">About D'EST</p>
+      <h2>Quality Skincare | Beauty Essentials | Spa Experiences</h2>
+      <p class="about-text">D'EST Skincare &amp; Spa is your destination for quality skincare, beauty essentials, and relaxing spa experiences. We're here to help you look good, feel confident and glow effortlessly.</p>
+    </div>
+    <div class="about-hours">
+      <h3>Opening Hours</h3>
+      <div class="hours-row"><span>Monday – Friday</span><span>9:00 AM – 6:00 PM</span></div>
+      <div class="hours-row"><span>Saturday</span><span>10:00 AM – 6:00 PM</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ORDER TRACKING ================= -->
+<section class="section section-blush" id="track">
+  <div class="section-head">
+    <p class="eyebrow">Already Ordered?</p>
+    <h2>Track Your Order</h2>
+  </div>
+  <form class="track-form" id="trackForm">
+    <input type="text" id="trackOrderId" placeholder="Order ID" required>
+    <input type="tel" id="trackPhone" placeholder="Phone Number" required>
+    <button type="submit" class="btn btn-primary">Track Order</button>
+  </form>
+  <div class="track-result" id="trackResult" hidden></div>
+  <button class="link-btn" id="trackWhatsappBtn" hidden>Or ask us on WhatsApp instead</button>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="section-head">
+    <p class="eyebrow">Get In Touch</p>
+    Hey! Let's get connected!
+    <h2>Contact &amp; Location</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Phone / WhatsApp</h3>
+      <p>08166501584</p>
+    </div>
+    <div class="contact-card">
+      <h3>Address</h3>
+      <p>Old Ife Road, Afro Bus-Stop, In God We Trust Plaza, Sawmill, Ibadan, Oyo State, Nigeria.</p>
+    </div>
+    <div class="contact-card">
+      <h3>Follow Us</h3>
+      <p><a href="https://www.instagram.com/d_est_skincareandspa?igsh=MWR0M3hiOTVqRtNQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.tiktok.com/@destskincareandspa?_r=1&_t=ZS-98qnNnHIsEv" target="_blank" rel="noopener">TikTok</a></p>
+    </div>
+  </div>
+  <button class="btn btn-whatsapp" id="askWhatsappBtn">Have a Question? Chat With Us</button>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <p class="footer-logo">D'EST <span>Skincare &amp; Spa</span></p>
+      <p class="footer-desc">Quality skincare, beauty essentials and relaxing spa experiences.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#spa">Spa</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <a href="https://www.instagram.com/d_est_skincareandspa?igsh=MWR0M3hiOTVqRtNQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@destskincareandspa?_r=1&_t=ZS-98qnNnHIsEv" target="_blank" rel="noopener">TikTok</a>
+      <a href="#" id="footerWhatsapp">WhatsApp</a>
+    </div>
+    <div>
+      <h4>Visit Us</h4>
+      <p>Old Ife Road, Afro Bus-Stop,<br>In God We Trust Plaza, Sawmill,<br>Ibadan, Oyo State</p>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; <span id="year"></span> D'EST Skincare &amp; Spa. All rights reserved.</p>
+</footer>
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+<button class="fab-whatsapp" id="fabWhatsapp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.2 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.08.17-.2.72-.84.91-1.13.19-.29.38-.24.63-.15.26.1 1.65.78 1.93.92.29.15.48.22.55.34.08.13.08.72-.16 1.4z"/></svg>
+</button>
+
+<!-- ================= CART DRAWER ================= -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="drawer-head">
+    <h3>Your Cart</h3>
+    <button class="drawer-close" id="cartClose" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <p class="cart-empty" id="cartEmptyMsg" hidden>Your cart is empty. Start adding your favourites!</p>
+  <div class="cart-summary" id="cartSummary">
+    <div class="summary-row"><span>Items</span><span id="sumQty">0</span></div>
+    <div class="summary-row"><span>Subtotal</span><span id="sumSubtotal">₦0</span></div>
+    <div class="summary-row summary-total"><span>Total</span><span id="sumTotal">₦0</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Proceed to Checkout</button>
+    <button class="link-btn" id="clearCartBtn">Clear cart</button>
+  </div>
+</aside>
+
+<!-- ================= PRODUCT QUICK VIEW MODAL ================= -->
+<div class="modal-overlay" id="modalOverlay"></div>
+<div class="modal product-modal" id="productModal" role="dialog" aria-modal="true">
+  <button class="modal-close" id="productModalClose" aria-label="Close">&times;</button>
+  <div class="pm-body" id="pmBody"></div>
+</div>
+
+<!-- ================= SPA SERVICES MODAL ================= -->
+<div class="modal spa-modal" id="spaModal" role="dialog" aria-modal="true" aria-label="Spa services">
+  <button class="modal-close" id="spaModalClose" aria-label="Close">&times;</button>
+  <div class="spa-modal-head">
+    <p class="eyebrow">D'EST Spa</p>
+    <h3>Our Spa Services</h3>
+    <p class="spa-modal-sub">Select a service below to book. All prices are in Naira (₦).</p>
+  </div>
+  <div class="spa-services-list" id="spaServicesList"></div>
+</div>
+
+<!-- ================= CHECKOUT MODAL ================= -->
+<div class="modal checkout-modal" id="checkoutModal" role="dialog" aria-modal="true">
+  <button class="modal-close" id="checkoutModalClose" aria-label="Close">&times;</button>
+  <div class="checkout-steps">
+    <span class="step active" data-step="1">1. Details</span>
+    <span class="step" data-step="2">2. Review</span>
+    <span class="step" data-step="3">3. Payment</span>
+    <span class="step" data-step="4">4. Done</span>
+  </div>
+
+  <!-- Step 1: customer info -->
+  <div class="checkout-panel" id="ckStep1">
+    <h3>Delivery Details</h3>
+    <form id="ckForm">
+      <label>Full Name<input type="text" id="ckName" required></label>
+      <label>Phone Number<input type="tel" id="ckPhone" required></label>
+      <label>WhatsApp Number<input type="tel" id="ckWhatsapp" required></label>
+      <label>State<input type="text" id="ckState" required></label>
+      <label>City / Area<input type="text" id="ckCity" required></label>
+      <label>Delivery Address<textarea id="ckAddress" required></textarea></label>
+      <label>Note (optional)<textarea id="ckNote"></textarea></label>
+      <button type="submit" class="btn btn-primary btn-block">Review Order</button>
+    </form>
+  </div>
+
+  <!-- Step 2: review -->
+  <div class="checkout-panel" id="ckStep2" hidden>
+    <h3 id="ckStep2Title">Review Your Order</h3>
+    <div id="ckReviewItems" class="ck-review-items"></div>
+    <div class="summary-row"><span>Subtotal</span><span id="ckSubtotal">₦0</span></div>
+    <div class="summary-row summary-total"><span>Total</span><span id="ckTotal">₦0</span></div>
+    <div class="ck-btn-row">
+      <button class="btn btn-outline" id="ckBackTo1">Back</button>
+      <button class="btn btn-primary" id="ckToPayment">Continue to Payment</button>
+    </div>
+  </div>
+
+  <!-- Step 3: payment -->
+  <div class="checkout-panel" id="ckStep3" hidden>
+    <h3>Payment</h3>
+    <div class="payment-box">
+      <p class="pay-label">Pay the total amount to:</p>
+      <div class="pay-details">
+        <div><span>Account Name</span><strong>D'EST SKINCARE &amp; SPA</strong></div>
+        <div><span>Bank</span><strong>MONIEPOINT</strong></div>
+        <div><span>Account Number</span><strong>5073013578</strong></div>
+        <div><span>Amount to Pay</span><strong id="payAmount">₦0</strong></div>
+      </div>
+    </div>
+    <div class="payment-countdown">
+      <p>Complete payment within:</p>
+      <div class="pc-timer" id="paymentTimer">20:00</div>
+      <p class="pc-expired" id="paymentExpiredMsg" hidden>This payment session has expired. Please restart checkout.</p>
+    </div>
+    <form id="ckPaymentForm">
+      <label>Full Name<input type="text" id="payName" required></label>
+      <label>Amount Paid (₦)<input type="number" id="payAmountPaid" min="0" required></label>
+      <label>Sender Name<input type="text" id="paySenderName" required></label>
+      <label>Sender Bank<input type="text" id="paySenderBank" required></label>
+      <button type="submit" class="btn btn-primary btn-block" id="paySubmitBtn">Submit Payment Info</button>
+    </form>
+  </div>
+
+  <!-- Step 4: confirmation -->
+  <div class="checkout-panel" id="ckStep4" hidden>
+    <div class="ck-success">
+      <div class="ck-check">&#10003;</div>
+      <h3 id="ckDoneTitle">Order Submitted</h3>
+      <p id="ckDoneMsg">Thank you! We've received your order and payment details.</p>
+      <p class="order-id-display">Order ID: <strong id="ckOrderIdOut"></strong></p>
+      <p class="order-status-note">Payment status: <strong>Pending Verification</strong>. Our team will verify your payment shortly.</p>
+      <div class="ck-final-actions">
+        <button class="btn btn-whatsapp" id="ckWhatsappConfirm">Confirm via WhatsApp</button>
+        <button class="btn btn-outline" id="ckCloseFinal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= WHATSAPP QUESTION MODAL ================= -->
+<div class="modal whatsapp-modal" id="whatsappModal" role="dialog" aria-modal="true">
+  <button class="modal-close" id="whatsappModalClose" aria-label="Close">&times;</button>
+  <h3>Ask Us a Question</h3>
+  <p class="wa-sub">Type your question below — we'll open WhatsApp with your message ready to send.</p>
+  <textarea id="waQuestionText" placeholder="Hello D'EST Skincare & Spa, I have a question about..."></textarea>
+  <button class="btn btn-whatsapp btn-block" id="waSendBtn">Chat With Us on WhatsApp</button>
+</div>
+
+<script type="module">
+/* =========================================================
+   D'EST Skincare & Spa — Storefront Logic
+   ========================================================= */
+
+const CONFIG = {
+  whatsappNumber: "2348166501584",
+  bank: { accountName: "D'EST SKINCARE & SPA", bank: "MONIEPOINT", accountNumber: "5073013578" },
+  paymentWindowMinutes: 20
+};
+
+/* ---------- SPA SERVICES DATA ---------- */
+const SPA_SERVICES = [
+  { category: "FACIALS", items: [
+    { name: "Brightening", price: 15000 },
+    { name: "Deep cleansing (HT+M)", price: 20000 },
+    { name: "Hydra facial", price: 25000 },
+    { name: "Micro needling", price: 25000 },
+    { name: "Acne treatment", price: 30000 },
+    { name: "Teeth whitening", price: 35000 },
+    { name: "Scaling and polishing", price: null },
+    { name: "Combo for teeth", price: null },
+    { name: "Body polish (HT970)", price: 8970 }
+  ]},
+  { category: "WAXING", items: [
+    { name: "Under arm", price: 3000 },
+    { name: "Brazilian", price: 6000 },
+    { name: "Half leg", price: 5000 },
+    { name: "Full leg", price: 18000 },
+    { name: "Full hand", price: 6000 },
+    { name: "Jawline razor", price: 35000 },
+    { name: "Full body", price: 20000 },
+    { name: "Skin tag (per spot)", price: 5000 }
+  ]},
+  { category: "PEDICURE", items: [
+    { name: "Best Signature Pedicure (Abormal)", price: 10000 },
+    { name: "Best Signature Radiance Pedicure (Luxury)", price: 15000 }
+  ]},
+  { category: "MANICURE", items: [
+    { name: "Manicure", price: 3000 },
+    { name: "Manicure with gel polish", price: 5000 }
+  ]},
+  { category: "MAKEUP", items: [
+    { name: "Make up", price: 25000 },
+    { name: "Make up with gele", price: 30000 }
+  ]},
+  { category: "BODY POLISH PACKAGES", items: [
+    { name: "Best Signature Polish", price: 225000, desc: "• Full-body cleansing\n• Gentle exfoliation/body polish\n• Rinse/clean up\n• Body moisturizing\n• Regular skin maintenance and smooth skin" },
+    { name: "Best Radiance Polish", price: 245000, desc: "• Full-body cleansing\n• Exfoliation\n• Brightening/glow body polish\n• Steam treatment\n• Body moisturizing & Relaxation\n• For dull-looking skin - clients who want a refreshed, radiant appearance" },
+    { name: "Best Royal Polish", price: null, desc: "• Body cleansing\n• Full body exfoliation\n• Steam treatment\n• Body moisturizing\n• Relaxation/massage" }
+  ]}
+];
+
+const IMG_BASE = "https://i.supaimg.com/c6552579-d0de-4eef-854e-74eb4e7fae13/";
+const img = (id) => IMG_BASE + id;
+
+/* ---------- ORIGINAL STATIC PRODUCTS (65 ITEMS) ---------- */
+const STATIC_PRODUCTS = [
+  { id:"p01", name:"Advanced Korean Skin", price:16000, cats:["brightening","body-cream"], images:[img("b884fc19-56dd-434c-adb6-67898594ecd2.heif")] },
+  { id:"p02", name:"Cosmo Glow White", price:10000, cats:["body-cream","brightening"], images:[img("b2edef61-1167-475a-981a-60e5d7bc521c.heif")] },
+  { id:"p03", name:"Dove Bath", price:10500, cats:["bath"], images:[img("9af710a6-175c-4951-baa4-17a78a0b077a.heif")] },
+  { id:"p04", name:"The Purest Glow", price:9000, cats:["body-cream"], images:[img("6a760dce-751c-4134-9b55-83a0afc362ac.heif")] },
+  { id:"p05", name:"Healthy Glow Bath", price:10000, cats:["bath"], images:[img("862a3dc6-d8ed-45d3-baa6-6ace7da499c0.heif")] },
+  { id:"p06", name:"Golden Glow Intensive Whitening", price:9500, cats:["brightening","body-cream"], images:[img("7e29d20f-c9c8-432e-a1d7-d781f83f1a15.heif")] },
+  { id:"p07", name:"Golden Glow Active White Plus Gluta", price:9500, cats:["brightening","body-cream"], images:[img("6a537a6f-9fac-464d-8505-de09330b2629.heif")] },
+  { id:"p08", name:"VET Gold Bath", price:9000, cats:["bath"], images:[
+      img("3ad38775-1d6d-4f58-adda-d850c8ebbea5.heif"),
+      img("64c6f2ee-88e6-4de3-bfce-3d85acc4aa16.heif"),
+      img("73cbaf07-a768-474d-81f4-3d9cb2de04ca.heif")
+  ]},
+  { id:"p09", name:"Collagene White", price:15500, cats:["body-cream","brightening"], images:[img("0735cae0-b23e-4e34-bd9a-c667bf672397.heif")] },
+  { id:"p10", name:"Fair Glow", price:3500, cats:["body-cream","brightening"], images:[img("3220b5b2-d667-42c0-94e3-c96ffd82c67a.heif")] },
+  { id:"p11", name:"Aqua Rich Hydrating Bright Body Gel Wash", price:12000, cats:["bath"], images:[img("88877c51-38a7-40b3-9b94-4aa82380cbc3.heif")] },
+  { id:"p13", name:"SKIN BY ZARON Vitamin C Bodywash", price:15500, cats:["bath","vitamin-c"], images:[img("8175fe03-c401-4ea1-b5bf-de4b077b3ec1.heif")] },
+  { id:"p14", name:"OLAY", price:21500, cats:["special"], images:[img("0f141c9a-fddf-49ff-b962-37e4ed1b6d77.heif")] },
+  { id:"p17", name:"Half Cast Vitamin C Pro Lightening Bath Gel", price:18000, cats:["bath","vitamin-c","brightening"], images:[img("cbcc3a54-23e7-4ec9-8073-721b6eaf0e57.heif")] },
+  { id:"p18", name:"Niu Skin Glowing Body Wash", price:9000, cats:["bath","brightening"], images:[img("e56172fd-824e-43aa-bc0d-96f1fd4d94c4.heif")] },
+  { id:"p19", name:"Palmer's Cocoa Butter Formula Daily Skin Therapy Body Lotion", price:15500, cats:["lotion"], images:[img("f442d991-235a-4265-91ab-cde18897a464.heif")] },
+  { id:"p20", name:"Dr. Rashel Vitamin C Moisturizer", price:5500, cats:["moisturizer","vitamin-c"], images:[img("66f7910b-9488-4c46-bb5e-96b4e275ee37.heif")] },
+  { id:"p21", name:"Nivea Soft Refreshing Moisturizing Cream", price:5500, cats:["moisturizer"], images:[img("dca0d20b-2703-41d7-b0fc-203f3790c54b.heif")] },
+  { id:"p22", name:"Heaven Scent Banana Body", price:3500, cats:["special"], images:[img("88bfbc12-d662-4c01-8162-965282ac2648.heif")] },
+  { id:"p23", name:"Men NIVEA", price:5500, cats:["mens"], images:[img("2b42fe9b-8abd-4ed1-8489-e2f53e0c45d4.heif")] },
+  { id:"p26", name:"S&K Duchess Glow", price:8000, cats:["special","brightening"], images:[
+      img("20dd27ad-a6fe-4b6d-a105-d90b421076d9.heif"), img("a0b32f8b-e14d-48cf-91a0-5f2318190ad0.heif")
+  ]},
+  { id:"p27", name:"Fade Milk", price:17000, cats:["body-cream","brightening"], images:[img("0edd509a-d28f-4238-9835-0c480650b1dd.heif")] },
+  { id:"p28", name:"Fair Child", price:3500, cats:["kids"], images:[img("b7aaa0e4-73f6-4245-bd46-ae6e64aaff1d.heif")] },
+  { id:"p29", name:"Baby Secret", price:11500, cats:["kids"], images:[
+      img("517760a9-9012-4969-ac40-2c15d7273690.heif"), img("f56985d3-3335-4396-8774-092f9b52ac8b.heif")
+  ]},
+  { id:"p30", name:"5 Medix", price:6000, cats:["special"], images:[img("c096d75e-2f02-44f8-a945-c9d735e9782a.heif")] },
+  { id:"p31", name:"E45 Junior Teens Moisturizing & Foaming Body Wash", price:6000, cats:["kids","bath"], images:[img("f9d11b86-4f9f-41ba-b640-b33509c4dd84.heif")] },
+  { id:"p33", name:"Body Butter", price:11000, cats:["body-cream"], images:[
+      img("50e920d4-b4bf-4d54-90df-2e1a390fc0dc.heif"), img("30e59813-e23d-42da-9304-47c14de67399.heif")
+  ]},
+  { id:"p34", name:"Body Lotion", price:8000, cats:["lotion"], images:[img("6c8fa483-72d5-488b-847d-033cac1be120.heif")] },
+  { id:"p35", name:"Vitamin C", price:5500, cats:["vitamin-c","lotion"], images:[img("1bf3b040-b4ec-4660-b4a8-14564fa4e3ab.heif")] },
+  { id:"p36", name:"Ceramide Moisturising Body Lotion", price:5000, cats:["lotion","moisturizer"], images:[img("9fa0cbba-4f90-4f94-b4c8-04b174714cf6.heif")] },
+  { id:"p37", name:"Simple", price:8000, cats:["lotion"], images:[img("ce5de29d-c925-415d-a216-090d0bc5bbb5.heif")] },
+  { id:"p38", name:"Dr. Davey Glutathione Body Lotion with Hyaluron and Vitamin", price:4000, cats:["lotion","vitamin-c"], images:[
+      img("1959f669-40a5-4942-b2e1-88e9fb14870b.heif"), img("7449486f-4aa7-4968-9b9d-227437c4a18f.heif")
+  ]},
+  { id:"p39", name:"Gluta White", price:11000, cats:["brightening","body-cream"], images:[
+      img("3db81a3b-49da-4d4c-b702-91170610ae72.heif"), img("afdff2d8-de63-4aea-ab36-92e69c23eab6.heif")
+  ]},
+  { id:"p40", name:"Medix Vitamin C", price:24000, cats:["vitamin-c","brightening"], images:[img("7e79ea1f-5b15-45ed-91de-b344f037add0.heif")] },
+  { id:"p41", name:"Fair and White", price:22000, cats:["brightening","lotion"], images:[img("689b57ac-1cec-4989-b302-b173a9e83a66.heif")] },
+  { id:"p42", name:"Dove Body Love", price:8000, cats:["bath"], images:[
+      img("64a8a03c-f999-4aaf-8922-ac546044eec1.heif"), img("4a52c865-1fc6-4156-ac12-8a05d9b5e723.heif")
+  ]},
+  { id:"p43", name:"GARNIER Hyaluron", price:11500, cats:["special","lotion"], images:[
+      img("322098ae-d2ba-4720-b600-bc4eaf666339.heif"), img("9221144c-cd70-44a1-bef2-3f1ff6ec3aee.heif")
+  ]},
+  { id:"p45", name:"K.B Brothers", price:9500, cats:["brightening","body-cream"], images:[img("da52fc12-4ba8-4e6f-93d2-91fea8ab1fe5.heif")] },
+  { id:"p47", name:"Aha Body", price:8000, cats:["body-cream","brightening"], images:[img("fb5b128f-f99f-432e-ae07-be5b294420b3.heif")] },
+  { id:"p49", name:"Lilies Kids & Teens Milk Soap", price:2500, cats:["kids","soap"], images:[img("81840109-d282-421f-b2ac-1ac1b73473dc.heif")] },
+  { id:"p50", name:"Veet Gold Skin Whitening & Toning Transparent Soap", price:3000, cats:["soap","brightening"], images:[img("1f071233-11a2-4132-95b8-4feaddf02c31.heif")] },
+  { id:"p51", name:"E45 3X Carrot", price:2000, cats:["soap","brightening"], images:[img("0e9305b6-8bdb-45c8-bdff-0a0b80a528a3.heif")] },
+  { id:"p52", name:"Alpha 3 Arbutin", price:3500, cats:["soap","vitamin-c"], images:[img("7b9a8d99-c392-44b9-8231-b754052b71b5.heif")] },
+  { id:"p53", name:"Ache Soap", price:800, cats:["soap"], images:[img("d78b5917-8131-4cfa-84e1-3963cca57cbe.heif")] },
+  { id:"p54", name:"Egg Yolk Soap", price:2500, cats:["soap"], images:[img("d33256dc-d0d9-4d4d-9c0a-e2e5eacb5fcc.heif")] },
+  { id:"p55", name:"Asantee Papaya & Honey Soap", price:1800, cats:["soap"], images:[img("3b8e5848-60d9-4492-8e50-b01e84e72f42.heif")] },
+  { id:"p56", name:"Eden Extra Whitening Apricot Face & Body Scrub", price:5000, cats:["special","brightening"], images:[img("b68cadc2-0c80-4d5b-9618-2e2473e1220c.heif")] },
+  { id:"p57", name:"Yoko Whitening Spa Salt for Armpit & Bikini Area", price:2000, cats:["special","brightening"], images:[img("10020949-e2fe-4905-b337-d8da9113ad61.heif")] },
+  { id:"p58", name:"Niu Skin Bright & Clear Face Cream", price:5000, cats:["moisturizer","brightening"], images:[img("243e9d4b-baa9-4d97-80a4-322b8756216d.heif")] },
+  { id:"p59", name:"Simple Body & Face Glow Oil", price:6000, cats:["body-cream","brightening"], images:[img("5a0d96c4-9213-46e6-bcb8-ef4dbbbbbcbc.heif")] },
+  { id:"p60", name:"Infinity Classic Glycerine Oil", price:500, cats:["special"], images:[img("d0b6f198-e340-400c-96c9-3f9bed487df1.heif")] },
+  { id:"p61", name:"Disaar Beauty Skin Care", price:2000, cats:["special"], images:[img("30b1e083-53ee-4460-9eaf-cf68801d7836.heif")] },
+  { id:"p62", name:"Bio-Oil Skincare Oil", price:9000, cats:["special"], images:[img("6614ccba-2d3b-46bd-9e6f-aa13417afd18.heif")] },
+  { id:"p63", name:"Turmeric Sugar Scrub", price:5000, cats:["special"], images:[img("81380406-bd7a-47aa-8bfa-364873362dda.heif")] },
+  { id:"p64", name:"Ssoft7 7 Days Extra Whitening Oil", price:4500, cats:["brightening","special"], images:[img("89fec3a5-28e9-4d7c-a0e4-39d4001cd2fd.heif")] },
+  { id:"p65", name:"Disaar Vitamin C", price:5000, cats:["vitamin-c"], images:[img("4e52a262-276e-49fc-874e-e144ff26903f.heif")] }
+];
+
+STATIC_PRODUCTS.forEach(p => { if(p.inStock === undefined) p.inStock = true; });
+
+/* Dynamic working product list (holds STATIC_PRODUCTS + FIREBASE PRODUCTS) */
+let PRODUCTS = [...STATIC_PRODUCTS];
+
+const CATEGORIES = [
+  { id:"all", label:"All Products" },
+  { id:"bath", label:"Bath & Shower" },
+  { id:"lotion", label:"Body Lotion" },
+  { id:"body-cream", label:"Body Cream & Butter" },
+  { id:"moisturizer", label:"Moisturizers" },
+  { id:"soap", label:"Soaps" },
+  { id:"kids", label:"Kids & Teens" },
+  { id:"mens", label:"Men's Care" },
+  { id:"vitamin-c", label:"Vitamin C" },
+  { id:"brightening", label:"Brightening Care" },
+  { id:"special", label:"Special Care" }
+];
+
+const FEATURED_IDS = ["p01","p13","p17","p40","p09","p19","p14","p33"];
+const POPULAR_IDS  = ["p05","p03","p39","p26","p37","p49","p23","p42"];
+
+const TESTIMONIAL_IMAGES = [
+  img("b8157548-9a50-4b5d-a536-650add55c58d.jpg"),
+  img("40714217-e295-4821-87e0-da5bdf4e7ba4.jpg"),
+  img("2a0ee2ce-bd32-4f32-b3f2-c04ff2244efe.jpg"),
+  img("bceac10e-3c6c-45b9-bbc9-af11c0830e3f.jpg")
+];
+
+const PLACEHOLDER_IMG = "data:image/svg+xml;utf8," + encodeURIComponent(
+  `<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect width='100%' height='100%' fill='#fcf0f2'/><text x='50%' y='50%' font-family='sans-serif' font-size='14' fill='#c07786' text-anchor='middle' dy='.3em'>D'EST</text></svg>`
+);
+
+function displayUrl(url){
+  if(!url) return PLACEHOLDER_IMG;
+  if(!/\.heif($|\?)/i.test(url)) return url;
+  return `https://wsrv.nl/?url=${encodeURIComponent(url)}&output=webp&q=85&w=800`;
+}
+
+/* ---------- HELPERS ---------- */
+const money = (n) => "₦" + Math.round(n || 0).toLocaleString("en-NG");
+const $ = (sel) => document.querySelector(sel);
+const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+
+function generateOrderId(){
+  const stamp = Date.now().toString(36).toUpperCase();
+  const rand = Math.random().toString(36).substring(2,6).toUpperCase();
+  return `DEST-${stamp}-${rand}`;
+}
+
+function waLink(message){
+  return `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
+
+function findProduct(id){ return PRODUCTS.find(p => p.id === id); }
+
+/* ---------- FIREBASE (Realtime Database Connection) ---------- */
+let db = null;
+let fbReady = false;
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAFZ-uJDSpbGkv-dgsb0jm-IoDEE7-oeS8",
+  authDomain: "admin-f8e52.firebaseapp.com",
+  databaseURL: "https://admin-f8e52-default-rtdb.firebaseio.com/",
+  projectId: "admin-f8e52",
+  storageBucket: "admin-f8e52.firebasestorage.app",
+  messagingSenderId: "135018676504",
+  appId: "1:135018676504:web:e0d2e4e39db2505ef69e6d",
+  measurementId: "G-FZVFJ71F9H"
+};
+
+(async function initFirebase(){
+  try{
+    const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+    const {
+      getDatabase, ref, push, set, get, onValue, query, orderByChild, equalTo, child
+    } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js");
+
+    const app = initializeApp(firebaseConfig);
+    db = getDatabase(app);
+    window.__fb = { ref, push, set, get, onValue, query, orderByChild, equalTo, child };
+    fbReady = true;
+
+    // Realtime Database listener on path `/inventory` to compute automatic sales & available stock
+    try {
+      const inventoryRef = ref(db, "inventory");
+      onValue(inventoryRef, (snap) => {
+        window.__inventoryData = snap.exists() ? snap.val() : {};
+        if (typeof calculateInventoryAndMerge === 'function') {
+          calculateInventoryAndMerge();
+        }
+      });
+    } catch(e) {
+      console.warn("Failed setting up realtime inventory listener.", e);
+    }
+
+    // Realtime Database listener on path `/orders` to calculate sales automatically
+    try {
+      const ordersRef = ref(db, "orders");
+      onValue(ordersRef, (snap) => {
+        window.__ordersData = snap.exists() ? snap.val() : {};
+        if (typeof calculateInventoryAndMerge === 'function') {
+          calculateInventoryAndMerge();
+        }
+      });
+    } catch(e) {
+      console.warn("Failed setting up realtime orders listener.", e);
+    }
+
+    // Realtime Database listener on path `/products`
+    try {
+      const productsRef = ref(db, "products");
+      onValue(productsRef, (snap) => {
+        window.__firebaseProductsData = snap.exists() ? snap.val() : {};
+        if (typeof calculateInventoryAndMerge === 'function') {
+          calculateInventoryAndMerge();
+        }
+      }, (err) => {
+        console.warn("Realtime listener error:", err);
+      });
+    } catch(e) {
+      console.warn("Failed setting up realtime Firebase product listener.", e);
+    }
+  }catch(err){
+    console.warn("Firebase unavailable — running with static products catalog.", err);
+    fbReady = false;
+  }
+})();
+
+function calculateInventoryAndMerge() {
+  const invData = window.__inventoryData || {};
+  const ordersData = window.__ordersData || {};
+  const rawFbProducts = window.__firebaseProductsData || {};
+
+  // 1. Calculate sales per product ID ONLY from confirmed/successful orders
+  const confirmedSales = {};
+  const CONFIRMED_ORDER_STATUSES = ["Confirmed", "Processing", "Delivered"];
+  Object.keys(ordersData).forEach(orderId => {
+    const order = ordersData[orderId];
+    if (!order) return;
+    const isConfirmed = CONFIRMED_ORDER_STATUSES.includes(order.orderStatus);
+    if (isConfirmed && Array.isArray(order.items)) {
+      order.items.forEach(item => {
+        if (item && item.id) {
+          confirmedSales[item.id] = (confirmedSales[item.id] || 0) + (item.qty || 1);
+        }
+      });
+    }
+  });
+
+  // 2. Parse products from Firebase DB
+  let liveProds = Object.keys(rawFbProducts).map((key) => {
+    const d = rawFbProducts[key] || {};
+
+    let price = null;
+    if (d.price !== undefined && d.price !== null && d.price !== "") {
+      price = Number(d.price);
+    }
+
+    let images = [];
+    if (d.imageUrl) {
+      images.push(d.imageUrl);
+    } else if (Array.isArray(d.images) && d.images.length > 0) {
+      images = d.images;
+    } else if (d.image) {
+      images.push(d.image);
+    } else {
+      images.push(PLACEHOLDER_IMG);
+    }
+
+    let cats = [];
+    if (Array.isArray(d.cats) && d.cats.length > 0) {
+      cats = d.cats;
+    } else if (d.category) {
+      cats = typeof d.category === 'string' ? d.category.toLowerCase().split(',').map(s=>s.trim()) : [d.category];
+    } else {
+      cats = ["special"];
+    }
+
+    return {
+      id: key,
+      name: d.name || "Unnamed Product",
+      price: price,
+      cats: cats,
+      images: images,
+      rawDbData: d
+    };
+  });
+
+  // 3. Merge STATIC_PRODUCTS + FIREBASE PRODUCTS
+  const fbMap = new Map(liveProds.map(p => [p.id, p]));
+  const mergedStatic = STATIC_PRODUCTS.map(sp => fbMap.has(sp.id) ? fbMap.get(sp.id) : sp);
+  const newFbProds = liveProds.filter(lp => !STATIC_PRODUCTS.some(sp => sp.id === lp.id));
+
+  PRODUCTS = [...mergedStatic, ...newFbProds];
+
+  // 4. Attach Inventory Data (Stock / Available / Sold / InStock)
+  PRODUCTS.forEach(p => {
+    const inv = invData[p.id];
+    let configuredStock = null;
+
+    if (inv && inv.stock !== undefined && inv.stock !== null && inv.stock !== "") {
+      configuredStock = Number(inv.stock);
+    } else if (p.rawDbData && p.rawDbData.stock !== undefined && p.rawDbData.stock !== null && p.rawDbData.stock !== "") {
+      configuredStock = Number(p.rawDbData.stock);
+    }
+
+    const soldCount = confirmedSales[p.id] || 0;
+
+    if (configuredStock !== null && !isNaN(configuredStock)) {
+      p.stockConfigured = true;
+      p.totalStock = configuredStock;
+      p.soldCount = soldCount;
+      p.availableStock = Math.max(0, configuredStock - soldCount);
+      p.inStock = p.availableStock > 0;
+    } else {
+      p.stockConfigured = false;
+      p.totalStock = null;
+      p.soldCount = soldCount;
+      p.availableStock = null;
+      p.inStock = true;
+    }
+  });
+
+  // Dynamically add new categories if present
+  const knownCats = new Set(CATEGORIES.map(c => c.id));
+  PRODUCTS.forEach(p => p.cats.forEach(catId => {
+    if(!knownCats.has(catId)){
+      knownCats.add(catId);
+      const label = catId.replace(/[-_]+/g, " ").replace(/\b\w/g, ch => ch.toUpperCase());
+      CATEGORIES.push({ id: catId, label });
+    }
+  }));
+
+  initAllGrids();
+  renderCart();
+}
+
+async function saveOrderToFirebase(orderId, data){
+  if(!fbReady || !db){
+    console.warn(`(offline mode) Would save order "${orderId}":`, data);
+    return { ok:false, offline:true };
+  }
+  try{
+    const { ref, set } = window.__fb;
+    await set(ref(db, "orders/" + orderId), { ...data, createdAt: Date.now() });
+    return { ok:true, id: orderId };
+  }catch(err){
+    console.error("Failed to save order to Realtime Database", err);
+    return { ok:false, error: err.message };
+  }
+}
+
+async function lookupOrder(orderId, phone){
+  if(!fbReady || !db) return { ok:false, offline:true };
+  try{
+    const { ref, get, child } = window.__fb;
+    const snap = await get(child(ref(db), "orders/" + orderId.trim()));
+    if(!snap.exists()) return { ok:true, found:false };
+    const data = snap.val();
+    const dataPhone = (data.customer?.phone || "").toString().trim();
+    if(dataPhone !== phone.trim()) return { ok:true, found:false };
+    return { ok:true, found:true, data };
+  }catch(err){
+    return { ok:false, error: err.message };
+  }
+}
+
+/* ---------- CART STATE & LOGIC ---------- */
+function loadCart(){
+  try{ return JSON.parse(localStorage.getItem("dest_cart") || "[]"); }catch(e){ return []; }
+}
+function saveCart(){ localStorage.setItem("dest_cart", JSON.stringify(CART)); }
+
+let CART = loadCart();
+let spaBooking = null;
+
+function cartTotals(){
+  let subtotal = 0, qty = 0;
+  CART.forEach(c => {
+    const p = findProduct(c.id);
+    if(p && p.price != null){ subtotal += p.price * c.qty; qty += c.qty; }
+  });
+  const discount = 0;
+  const delivery = 0;
+  const total = subtotal - discount + delivery;
+  return { subtotal, qty, discount, delivery, total };
+}
+
+function getOrderTotals(){
+  if(spaBooking){
+    const subtotal = spaBooking.price || 0;
+    const discount = 0;
+    const delivery = 0;
+    const total = subtotal - discount + delivery;
+    return { subtotal, qty:1, discount, delivery, total };
+  }
+  return cartTotals();
+}
+
+function bumpCartBadge(){
+  const badge = $("#cartBadge");
+  if(!badge) return;
+  badge.classList.add("bump");
+  setTimeout(()=>badge.classList.remove("bump"), 300);
+}
+
+function renderCart(){
+  const wrap = $("#cartItems");
+  if(!wrap) return;
+  const t = cartTotals();
+  $("#cartBadge").textContent = t.qty;
+
+  if(CART.length === 0){
+    wrap.innerHTML = "";
+    $("#cartEmptyMsg").hidden = false;
+    $("#cartSummary").style.display = "none";
+  } else {
+    $("#cartEmptyMsg").hidden = true;
+    $("#cartSummary").style.display = "block";
+    wrap.innerHTML = CART.map(c => {
+      const p = findProduct(c.id);
+      if(!p) return "";
+      const isMax = p.stockConfigured && c.qty >= p.availableStock;
+      return `
+      <div class="cart-item">
+        <img src="${displayUrl(p.images[0])}" alt="${p.name}" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}'">
+        <div class="ci-info">
+          <span class="ci-name">${p.name}</span>
+          <span class="ci-price">${money(p.price)} each</span>
+          <div class="ci-qty">
+            <button data-act="dec" data-id="${p.id}" aria-label="Decrease quantity">-</button>
+            <span>${c.qty}</span>
+            <button data-act="inc" data-id="${p.id}" ${isMax ? 'disabled' : ''} aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+        <button class="ci-remove" data-act="remove" data-id="${p.id}">Remove</button>
+      </div>`;
+    }).join("");
+  }
+
+  $("#sumQty").textContent = t.qty;
+  $("#sumSubtotal").textContent = money(t.subtotal);
+  $("#sumTotal").textContent = money(t.total);
+}
+
+function addToCart(id, qty=1){
+  const product = findProduct(id);
+  if(!product || product.price == null || product.inStock === false) return;
+  const existing = CART.find(c => c.id === id);
+  const currentQty = existing ? existing.qty : 0;
+  let newQty = currentQty + qty;
+
+  if (product.stockConfigured && newQty > product.availableStock) {
+    newQty = product.availableStock;
+  }
+  if (newQty <= currentQty && existing) return;
+
+  if(existing){ existing.qty = newQty; } else { CART.push({ id, qty: newQty }); }
+  saveCart();
+  renderCart();
+  bumpCartBadge();
+}
+
+function updateQty(id, delta){
+  const item = CART.find(c => c.id === id);
+  if(!item) return;
+  const product = findProduct(id);
+  let newQty = item.qty + delta;
+  if (product && product.stockConfigured && newQty > product.availableStock) {
+    newQty = product.availableStock;
+  }
+  item.qty = newQty;
+  if(item.qty <= 0){ CART = CART.filter(c => c.id !== id); }
+  saveCart();
+  renderCart();
+}
+
+function removeFromCart(id){
+  CART = CART.filter(c => c.id !== id);
+  saveCart();
+  renderCart();
+}
+
+function clearCart(){
+  CART = [];
+  saveCart();
+  renderCart();
+}
+
+$("#cartItems").addEventListener("click", (e)=>{
+  const btn = e.target.closest("button[data-act]");
+  if(!btn) return;
+  const id = btn.dataset.id;
+  if(btn.dataset.act === "inc") updateQty(id, 1);
+  if(btn.dataset.act === "dec") updateQty(id, -1);
+  if(btn.dataset.act === "remove") removeFromCart(id);
+});
+$("#clearCartBtn").addEventListener("click", clearCart);
+
+/* ---------- PRODUCT CARD / GRID RENDERING ---------- */
+function productCardHTML(p, badge){
+  const outOfStock = p.inStock === false;
+  const priceHTML = p.price != null
+    ? `<span class="pc-price ${outOfStock ? 'unavailable' : ''}">${money(p.price)}</span>`
+    : `<span class="pc-price unavailable">Price unavailable</span>`;
+  
+  let stockNoteHTML = "";
+  if (p.stockConfigured) {
+    stockNoteHTML = outOfStock
+      ? `<span class="pc-stock-note">Out of Stock</span>`
+      : `<span class="pc-stock-note">Available: ${p.availableStock}</span>`;
+  }
+
+  const addDisabled = (p.price == null || outOfStock) ? "disabled" : "";
+  const addLabel = outOfStock ? "Out of Stock" : "Add to Cart";
+  const catLabel = CATEGORIES.find(c => p.cats.includes(c.id))?.label || "";
+  const imgs = p.images.map((src,i)=>`<img src="${displayUrl(src)}" data-i="${i}" class="${i===0?'active':''}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}'">`).join("");
+  const dots = p.images.length > 1
+    ? `<div class="pc-dots">${p.images.map((_,i)=>`<span class="pc-dot ${i===0?'active':''}" data-i="${i}"></span>`).join("")}</div>` : "";
+  const isWish = wishlist.includes(p.id);
+
+  return `
+  <article class="product-card ${outOfStock ? 'out-of-stock' : ''}" data-id="${p.id}">
+    <div class="pc-media" data-variants="${p.images.length}">
+      ${outOfStock ? `<span class="pc-badge pc-badge-stock">Out of Stock</span>` : (badge ? `<span class="pc-badge">${badge}</span>` : "")}
+      <button class="pc-wishlist ${isWish ? 'active' : ''}" data-act="wishlist" data-id="${p.id}" aria-label="Add to wishlist">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.2C.4 8.2 2 4.5 5.6 4A5 5 0 0 1 12 6.5 5 5 0 0 1 18.4 4C22 4.5 23.6 8.2 22 11.8 19.5 16.4 12 21 12 21z"/></svg>
+      </button>
+      ${imgs}
+      ${dots}
+    </div>
+    <div class="pc-body">
+      <span class="pc-cat">${catLabel}</span>
+      <span class="pc-name" data-act="view" data-id="${p.id}">${p.name}</span>
+      ${priceHTML}
+      ${stockNoteHTML}
+      <div class="pc-actions">
+        <button class="pc-add" data-act="add" data-id="${p.id}" ${addDisabled}>${addLabel}</button>
+        <button class="pc-view" data-act="view" data-id="${p.id}">Quick View</button>
+      </div>
+    </div>
+  </article>`;
+}
+
+/* ---------- FILTERING & PAGINATION STATE ---------- */
+let currentCategory = "all";
+let searchQuery = "";
+let currentPage = 1;
+const itemsPerPage = 12;
+let wishlist = JSON.parse(localStorage.getItem("dest_wishlist") || "[]");
+
+function toggleWishlist(id){
+  if(wishlist.includes(id)){
+    wishlist = wishlist.filter(x => x !== id);
+  } else {
+    wishlist.push(id);
+  }
+  localStorage.setItem("dest_wishlist", JSON.stringify(wishlist));
+  initAllGrids();
+}
+
+function renderCategoryBar(){
+  const bar = $("#categoryBar");
+  if(!bar) return;
+  bar.innerHTML = CATEGORIES.map(c => `
+    <button class="cat-chip ${c.id === currentCategory ? 'active' : ''}" data-cat="${c.id}">${c.label}</button>
+  `).join("");
+}
+
+function renderFeatured(){
+  const grid = $("#featuredGrid");
+  if(!grid) return;
+  const list = FEATURED_IDS.map(id => findProduct(id)).filter(Boolean);
+  grid.innerHTML = list.map(p => productCardHTML(p, "Featured")).join("");
+}
+
+function renderPopular(){
+  const grid = $("#popularGrid");
+  if(!grid) return;
+  const list = POPULAR_IDS.map(id => findProduct(id)).filter(Boolean);
+  grid.innerHTML = list.map(p => productCardHTML(p, "Popular")).join("");
+}
+
+function renderShopGrid(){
+  const grid = $("#shopGrid");
+  const empty = $("#shopEmpty");
+  const pag = $("#shopPagination");
+  if(!grid) return;
+
+  let filtered = PRODUCTS.filter(p => {
+    const catMatch = currentCategory === "all" || p.cats.includes(currentCategory);
+    const searchMatch = !searchQuery || p.name.toLowerCase().includes(searchQuery.toLowerCase());
+    return catMatch && searchMatch;
+  });
+
+  if(filtered.length === 0){
+    grid.innerHTML = "";
+    if(empty) empty.hidden = false;
+    if(pag) pag.hidden = true;
+    return;
+  }
+  if(empty) empty.hidden = true;
+
+  const totalPages = Math.ceil(filtered.length / itemsPerPage);
+  if(currentPage > totalPages) currentPage = 1;
+
+  const start = (currentPage - 1) * itemsPerPage;
+  const pageItems = filtered.slice(start, start + itemsPerPage);
+
+  grid.innerHTML = pageItems.map(p => productCardHTML(p)).join("");
+
+  if(pag){
+    if(totalPages <= 1){
+      pag.hidden = true;
+    } else {
+      pag.hidden = false;
+      $("#shopPaginationStatus").textContent = `Showing ${start + 1}–${Math.min(start + itemsPerPage, filtered.length)} of ${filtered.length} products`;
+      let btns = "";
+      for(let i = 1; i <= totalPages; i++){
+        btns += `<button class="page-num-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+      }
+      $("#shopPageNums").innerHTML = btns;
+    }
+  }
+
+  // Trigger intersection observer for smooth animation
+  observeCards();
+}
+
+function observeCards(){
+  const cards = $$(".product-card");
+  if(!("IntersectionObserver" in window)){
+    cards.forEach(c => c.classList.add("in-view"));
+    return;
+  }
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("in-view");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  cards.forEach(c => observer.observe(c));
+}
+
+function initAllGrids(){
+  renderCategoryBar();
+  renderFeatured();
+  renderPopular();
+  renderShopGrid();
+}
+
+/* Event Delegation for Grid Card Buttons & Hover/Click Events */
+document.addEventListener("click", (e) => {
+  const catBtn = e.target.closest(".cat-chip");
+  if(catBtn){
+    currentCategory = catBtn.dataset.cat;
+    currentPage = 1;
+    renderCategoryBar();
+    renderShopGrid();
+    return;
+  }
+
+  const pageBtn = e.target.closest(".page-num-btn");
+  if(pageBtn){
+    currentPage = parseInt(pageBtn.dataset.page);
+    renderShopGrid();
+    $("#shop").scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
+
+  const actBtn = e.target.closest("button[data-act], span[data-act]");
+  if(actBtn){
+    const act = actBtn.dataset.act;
+    const id = actBtn.dataset.id;
+    if(act === "add"){
+      addToCart(id, 1);
+    } else if(act === "view"){
+      openProductModal(id);
+    } else if(act === "wishlist"){
+      toggleWishlist(id);
+    }
+  }
+});
+
+/* ---------- PRODUCT QUICK VIEW MODAL ---------- */
+function openProductModal(id){
+  const p = findProduct(id);
+  if(!p) return;
+  const pmBody = $("#pmBody");
+  
+  const priceHTML = p.price != null
+    ? `<div class="pm-price">${money(p.price)}</div>`
+    : `<div class="pm-price" style="font-size:14px;color:var(--charcoal-soft);">Price unavailable</div>`;
+
+  let stockNoteHTML = "";
+  if (p.stockConfigured) {
+    stockNoteHTML = p.inStock === false
+      ? `<div class="pm-stock-note">Out of Stock</div>`
+      : `<div class="pm-stock-note">Available Stock: ${p.availableStock}</div>`;
+  }
+
+  const catLabel = CATEGORIES.find(c => p.cats.includes(c.id))?.label || "";
+  const imgs = p.images.map((src,i)=>`<img src="${displayUrl(src)}" class="${i===0?'active':''}" data-i="${i}" alt="${p.name}">`).join("");
+  const dots = p.images.length > 1
+    ? `<div class="pm-dots">${p.images.map((_,i)=>`<span class="${i===0?'active':''}" data-i="${i}"></span>`).join("")}</div>` : "";
+
+  pmBody.innerHTML = `
+    <div class="pm-media">
+      ${imgs}
+      ${dots}
+    </div>
+    <div class="pm-info">
+      <span class="pm-cat">${catLabel}</span>
+      <h2 class="pm-name">${p.name}</h2>
+      ${priceHTML}
+      ${stockNoteHTML}
+      ${p.inStock !== false && p.price != null ? `
+      <div class="pm-qty">
+        <button id="pmDec">-</button>
+        <span id="pmQtyVal">1</span>
+        <button id="pmInc">+</button>
+      </div>
+      <div class="pm-actions">
+        <button class="btn btn-primary btn-block" id="pmAddToCart">Add to Cart</button>
+      </div>` : `<p style="font-size:13px;color:var(--charcoal-soft);">This item is currently unavailable for online purchase.</p>`}
+    </div>
+  `;
+
+  let modalQty = 1;
+  const updateModalQtyUI = () => {
+    const qtyVal = $("#pmQtyVal");
+    if(qtyVal) qtyVal.textContent = modalQty;
+    const incBtn = $("#pmInc");
+    if (incBtn && p.stockConfigured) {
+      incBtn.disabled = modalQty >= p.availableStock;
+    }
+  };
+
+  pmBody.onclick = (e) => {
+    if(e.target.id === "pmDec" && modalQty > 1){ modalQty--; updateModalQtyUI(); }
+    if(e.target.id === "pmInc"){
+      if (!p.stockConfigured || modalQty < p.availableStock) {
+        modalQty++; updateModalQtyUI();
+      }
+    }
+    if(e.target.id === "pmAddToCart"){
+      addToCart(p.id, modalQty);
+      closeProductModal();
+    }
+    const dot = e.target.closest(".pm-dots span");
+    if(dot){
+      const idx = parseInt(dot.dataset.i);
+      $$(".pm-media img").forEach((img, i) => img.classList.toggle("active", i === idx));
+      $$(".pm-dots span").forEach((s, i) => s.classList.toggle("active", i === idx));
+    }
+  };
+
+  $("#modalOverlay").classList.add("open");
+  $("#productModal").classList.add("open");
+}
+
+function closeProductModal(){
+  $("#modalOverlay").classList.remove("open");
+  $("#productModal").classList.remove("open");
+}
+$("#productModalClose").addEventListener("click", closeProductModal);
+
+/* ---------- SPA MODAL logic ---------- */
+function renderSpaModal(){
+  const list = $("#spaServicesList");
+  if(!list) return;
+  list.innerHTML = SPA_SERVICES.map(cat => `
+    <div class="spa-cat-block">
+      <h4 class="spa-cat-title">${cat.category}</h4>
+      <div class="spa-service-grid">
+        ${cat.items.map(item => `
+          <div class="spa-service-card">
+            <div class="ssc-top">
+              <span class="ssc-name">${item.name}</span>
+              <span class="ssc-price ${item.price == null ? 'unavailable' : ''}">${item.price != null ? money(item.price) : 'Price on request'}</span>
+            </div>
+            ${item.desc ? `<p style="font-size:12px; color:var(--charcoal-soft); white-space:pre-line;">${item.desc}</p>` : ''}
+            <button class="btn btn-outline ssc-book" data-spa-name="${item.name}" data-spa-price="${item.price || 0}">Book Service</button>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+  `).join("");
+}
+
+function openSpaModal(){
+  renderSpaModal();
+  $("#modalOverlay").classList.add("open");
+  $("#spaModal").classList.add("open");
+}
+function closeSpaModal(){
+  $("#modalOverlay").classList.remove("open");
+  $("#spaModal").classList.remove("open");
+}
+$("#spaModalClose").addEventListener("click", closeSpaModal);
+$("#heroBookSpaBtn").addEventListener("click", openSpaModal);
+
+document.addEventListener("click", (e)=>{
+  const bookBtn = e.target.closest(".ssc-book");
+  if(bookBtn){
+    const name = bookBtn.dataset.spaName;
+    const price = parseInt(bookBtn.dataset.spaPrice) || 0;
+    spaBooking = { name, price };
+    closeSpaModal();
+    openCheckoutModal();
+  }
+});
+
+/* ---------- CHECKOUT MODAL LOGIC ---------- */
+let checkoutStep = 1;
+let currentOrderId = "";
+let paymentTimerInterval = null;
+
+function setCheckoutStep(s){
+  checkoutStep = s;
+  $$(".checkout-steps .step").forEach(el => {
+    el.classList.toggle("active", parseInt(el.dataset.step) === s);
+  });
+  $("#ckStep1").hidden = (s !== 1);
+  $("#ckStep2").hidden = (s !== 2);
+  $("#ckStep3").hidden = (s !== 3);
+  $("#ckStep4").hidden = (s !== 4);
+}
+
+function openCheckoutModal(){
+  if(!spaBooking && CART.length === 0) return;
+  setCheckoutStep(1);
+  
+  if(spaBooking){
+    $("#ckStep2Title").textContent = "Review Spa Booking";
+  } else {
+    $("#ckStep2Title").textContent = "Review Your Order";
+  }
+
+  $("#modalOverlay").classList.add("open");
+  $("#checkoutModal").classList.add("open");
+}
+
+function closeCheckoutModal(){
+  $("#modalOverlay").classList.remove("open");
+  $("#checkoutModal").classList.remove("open");
+  spaBooking = null;
+  if(paymentTimerInterval) clearInterval(paymentTimerInterval);
+}
+$("#checkoutModalClose").addEventListener("click", closeCheckoutModal);
+$("#checkoutBtn").addEventListener("click", () => {
+  $("#cartDrawer").classList.remove("open");
+  $("#drawerOverlay").classList.remove("open");
+  openCheckoutModal();
+});
+
+/* Step 1 Submit -> Step 2 Review */
+$("#ckForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const totals = getOrderTotals();
+  const reviewItemsWrap = $("#ckReviewItems");
+
+  if(spaBooking){
+    reviewItemsWrap.innerHTML = `
+      <div class="ck-review-item">
+        <span><strong>Spa Service:</strong> ${spaBooking.name}</span>
+        <span>${money(spaBooking.price)}</span>
+      </div>`;
+  } else {
+    reviewItemsWrap.innerHTML = CART.map(c => {
+      const p = findProduct(c.id);
+      return `
+      <div class="ck-review-item">
+        <span>${p ? p.name : 'Item'} &times; ${c.qty}</span>
+        <span>${money((p ? p.price : 0) * c.qty)}</span>
+      </div>`;
+    }).join("");
+  }
+
+  $("#ckSubtotal").textContent = money(totals.subtotal);
+  $("#ckTotal").textContent = money(totals.total);
+
+  setCheckoutStep(2);
+});
+
+$("#ckBackTo1").addEventListener("click", () => setCheckoutStep(1));
+
+/* Step 2 -> Step 3 Payment */
+$("#ckToPayment").addEventListener("click", () => {
+  currentOrderId = generateOrderId();
+  const totals = getOrderTotals();
+  $("#payAmount").textContent = money(totals.total);
+  
+  // Pre-fill payment name from Step 1
+  $("#payName").value = $("#ckName").value;
+  $("#payAmountPaid").value = totals.total;
+
+  startPaymentTimer();
+  setCheckoutStep(3);
+});
+
+function startPaymentTimer(){
+  if(paymentTimerInterval) clearInterval(paymentTimerInterval);
+  let duration = CONFIG.paymentWindowMinutes * 60;
+  const timerDisplay = $("#paymentTimer");
+  const expiredMsg = $("#paymentExpiredMsg");
+  expiredMsg.hidden = true;
+
+  paymentTimerInterval = setInterval(() => {
+    const mins = Math.floor(duration / 60);
+    const secs = duration % 60;
+    timerDisplay.textContent = `${mins.toString().padStart(2,'0')}:${secs.toString().padStart(2,'0')}`;
+    if(--duration < 0){
+      clearInterval(paymentTimerInterval);
+      expiredMsg.hidden = false;
+      $("#paySubmitBtn").disabled = true;
+    }
+  }, 1000);
+}
+
+/* Step 3 Submit -> Save & Step 4 Done */
+$("#ckPaymentForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const totals = getOrderTotals();
+
+  const orderData = {
+    orderId: currentOrderId,
+    type: spaBooking ? "spa_booking" : "product_order",
+    orderStatus: "Pending", // real status field used by admin dashboard
+    status: "Pending Verification",
+    customer: {
+      name: $("#ckName").value,
+      phone: $("#ckPhone").value,
+      whatsapp: $("#ckWhatsapp").value,
+      state: $("#ckState").value,
+      city: $("#ckCity").value,
+      address: $("#ckAddress").value,
+      note: $("#ckNote").value || ""
+    },
+    items: spaBooking ? [{ name: spaBooking.name, price: spaBooking.price, qty: 1 }] : CART.map(c => {
+      const p = findProduct(c.id);
+      return { id: c.id, name: p ? p.name : "", price: p ? p.price : 0, qty: c.qty };
+    }),
+    totals: totals,
+    payment: {
+      payerName: $("#payName").value,
+      amountPaid: Number($("#payAmountPaid").value),
+      senderName: $("#paySenderName").value,
+      senderBank: $("#paySenderBank").value,
+      bankAccountUsed: CONFIG.bank.accountNumber
+    }
+  };
+
+  const res = await saveOrderToFirebase(currentOrderId, orderData);
+  if(paymentTimerInterval) clearInterval(paymentTimerInterval);
+
+  $("#ckOrderIdOut").textContent = currentOrderId;
+  if(!spaBooking) clearCart();
+
+  setCheckoutStep(4);
+});
+
+/* WhatsApp confirmation from Step 4 */
+$("#ckWhatsappConfirm").addEventListener("click", () => {
+  const name = $("#ckName").value;
+  const msg = `Hello D'EST Skincare & Spa, I have completed payment for my order.\n\nOrder ID: ${currentOrderId}\nName: ${name}\nAmount: ${$("#payAmountPaid").value}`;
+  window.open(waLink(msg), "_blank");
+});
+$("#ckCloseFinal").addEventListener("click", closeCheckoutModal);
+
+/* ---------- SEARCH BAR & TRACKING & WHATSAPP MODALS ---------- */
+const searchToggle = $("#searchToggle");
+const searchBar = $("#searchBar");
+const searchInput = $("#searchInput");
+
+searchToggle.addEventListener("click", () => {
+  searchBar.classList.toggle("open");
+  if(searchBar.classList.contains("open")) searchInput.focus();
+});
+$("#searchClose").addEventListener("click", () => searchBar.classList.remove("open"));
+
+searchInput.addEventListener("input", (e) => {
+  searchQuery = e.target.value.trim();
+  currentPage = 1;
+  renderShopGrid();
+  const count = PRODUCTS.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase())).length;
+  $("#searchResultsCount").textContent = searchQuery ? `Found ${count} matching products` : "";
+});
+
+/* Track Order Toggle */
+$("#trackToggle").addEventListener("click", () => {
+  $("#track").scrollIntoView({ behavior: 'smooth' });
+});
+
+$("#trackForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const id = $("#trackOrderId").value;
+  const phone = $("#trackPhone").value;
+  const resWrap = $("#trackResult");
+  const waBtn = $("#trackWhatsappBtn");
+
+  resWrap.hidden = false;
+  resWrap.innerHTML = "<p style='font-size:13px;'>Checking order status...</p>";
+
+  const res = await lookupOrder(id, phone);
+  if(!res.ok || !res.found){
+    resWrap.innerHTML = "<p style='font-size:13px; color:#c0392b;'>Order not found. Please verify your Order ID and Phone number.</p>";
+    waBtn.hidden = false;
+  } else {
+    const o = res.data;
+    resWrap.innerHTML = `
+      <h4>Order Status</h4>
+      <div class="tr-row"><span>Order ID</span><strong>${o.orderId}</strong></div>
+      <div class="tr-row"><span>Status</span><span class="status-pill">${o.orderStatus || o.status}</span></div>
+      <div class="tr-row"><span>Total</span><strong>${money(o.totals?.total)}</strong></div>
+    `;
+    waBtn.hidden = true;
+  }
+});
+
+$("#trackWhatsappBtn").addEventListener("click", () => {
+  const id = $("#trackOrderId").value;
+  const msg = `Hello D'EST Skincare & Spa, I would like to check the status of my order ID: ${id}`;
+  window.open(waLink(msg), "_blank");
+});
+
+/* WhatsApp Question Modal */
+const waModal = $("#whatsappModal");
+function openWaModal(){
+  $("#modalOverlay").classList.add("open");
+  waModal.classList.add("open");
+}
+function closeWaModal(){
+  $("#modalOverlay").classList.remove("open");
+  waModal.classList.remove("open");
+}
+$("#askWhatsappBtn").addEventListener("click", openWaModal);
+$("#whatsappModalClose").addEventListener("click", closeWaModal);
+$("#fabWhatsapp").addEventListener("click", () => {
+  window.open(waLink("Hello D'EST Skincare & Spa, I'm interested in your products/services."), "_blank");
+});
+$("#footerWhatsapp").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.open(waLink("Hello D'EST Skincare & Spa,"), "_blank");
+});
+
+$("#waSendBtn").addEventListener("click", () => {
+  const txt = $("#waQuestionText").value.trim() || "Hello D'EST Skincare & Spa, I have a question.";
+  window.open(waLink(txt), "_blank");
+  closeWaModal();
+});
+
+/* ---------- HEADER & DRAWER LOGIC ---------- */
+const cartToggle = $("#cartToggle");
+const cartDrawer = $("#cartDrawer");
+const drawerOverlay = $("#drawerOverlay");
+const cartClose = $("#cartClose");
+
+function openCart(){
+  cartDrawer.classList.add("open");
+  drawerOverlay.classList.add("open");
+}
+function closeCart(){
+  cartDrawer.classList.remove("open");
+  drawerOverlay.classList.remove("open");
+}
+cartToggle.addEventListener("click", openCart);
+cartClose.addEventListener("click", closeCart);
+drawerOverlay.addEventListener("click", closeCart);
+
+/* Mobile Nav Drawer */
+const hamburgerBtn = $("#hamburgerBtn");
+const mainNav = $("#mainNav");
+const navOverlay = $("#navOverlay");
+
+hamburgerBtn.addEventListener("click", () => {
+  const open = mainNav.classList.toggle("open");
+  navOverlay.classList.toggle("open", open);
+  hamburgerBtn.classList.toggle("open", open);
+});
+navOverlay.addEventListener("click", () => {
+  mainNav.classList.remove("open");
+  navOverlay.classList.remove("open");
+  hamburgerBtn.classList.remove("open");
+});
+$$(".main-nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("open");
+    navOverlay.classList.remove("open");
+    hamburgerBtn.classList.remove("open");
+  });
+});
+
+/* Modal Overlay Click */
+$("#modalOverlay").addEventListener("click", () => {
+  closeProductModal();
+  closeSpaModal();
+  closeCheckoutModal();
+  closeWaModal();
+});
+
+/* ---------- TESTIMONIAL SLIDER ---------- */
+(function initTestimonials(){
+  const track = $("#testiTrack");
+  const dotsWrap = $("#testiDots");
+  if(!track) return;
+
+  track.innerHTML = TESTIMONIAL_IMAGES.map(src => `<img src="${displayUrl(src)}" alt="Customer Testimonial" loading="lazy">`).join("");
+  dotsWrap.innerHTML = TESTIMONIAL_IMAGES.map((_,i) => `<span class="${i===0?'active':''}" data-i="${i}"></span>`).join("");
+
+  let current = 0;
+  const total = TESTIMONIAL_IMAGES.length;
+
+  function goTo(index){
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    $$("#testiDots span").forEach((d,i) => d.classList.toggle("active", i === current));
+  }
+
+  $("#testiPrev").addEventListener("click", () => goTo(current - 1));
+  $("#testiNext").addEventListener("click", () => goTo(current + 1));
+  dotsWrap.addEventListener("click", (e) => {
+    if(e.target.dataset.i) goTo(parseInt(e.target.dataset.i));
+  });
+
+  setInterval(() => goTo(current + 1), 5000);
+})();
+
+/* Footer Year */
+$("#year").textContent = new Date().getFullYear();
+
+</script>
+</body>
+</html>
